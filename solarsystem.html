@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="solarsystem.css">
+</head>
+<body>
+    <section class="container">
+    <div class="solarsystem">
+        <div class="particle" id="sun">
+            <div class="circle1"></div>
+         </div>
+        <div class="particle" id="mercury">
+        <div class="circle"></div>
+          </div><div class="particle" id="mercury">
+        <div class="circle"></div>
+          </div>
+         <div class="particle" id="venus">
+        <div class="circle"></div>
+     </div>
+     <div class="particle" id="earth">
+        <div class="circle"></div>
+     </div>
+     <div class="satellite">
+     <div class="particle" id="moon">
+        <div class="circle"></div>
+     </div>
+     </div>
+     <div class="particle" id="mars">
+        <div class="circle"></div>
+     </div>
+     <div class="belt" id="asteroid">
+      <div></div>
+   </div>
+     <div class="particle" id="jupiter">
+        <div class="circle"></div>
+     </div>
+     <div class="particle" id="saturn">
+        <div class="circle"></div>
+        <div class="ring"></div>
+     </div>
+     <div class="particle" id="uranus">
+        <div class="circle"></div>
+     </div>
+     <div class="particle" id="neptune">
+        <div class="circle"></div>
+     </div>
+    </div>
+</section>
+<section>
+   <div></div>
+  </section>
+  <script>
+      function stars(){
+          const count = 150;
+          const section = document.querySelector('section');
+          var i =0;
+          while(i<count){
+              const star =document.createElement('i');
+              const x = Math.floor(Math.random()*window.innerWidth)
+              const y =  Math.floor(Math.random()*window.innerHeight)
+
+              const size = Math.random() *2;
+              star.style.left = x+'px';
+              star.style.top = y+'px';
+              star.style.width = 1+size+'px';
+              star.style.height = 1+size+'px';
+
+              const duration = Math.random()*2;
+              
+              star.style.animationDuration = 2+duration+'s';
+              star.style.animationDelay = 2+duration+'s';
+
+
+              section.appendChild(star);
+              i++
+          }
+          }
+      stars();
+
+
+
+  </script>
+</body>
+</html>
